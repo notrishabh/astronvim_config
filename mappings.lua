@@ -9,6 +9,7 @@ return {
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
+    ["<leader>fs"] = { "<Cmd>lua require('telescope').extensions.frecency.frecency({ workspace = 'CWD' })<CR>", desc = "Telescope frecency" },
     ["<leader>bD"] = {
       function()
         require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
